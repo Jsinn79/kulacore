@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f5f0;
+  --foreground: #1a3a4a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Ocean Blues */
+  --color-ocean-50: #f0f7fa;
+  --color-ocean-100: #d9eef5;
+  --color-ocean-200: #b3dded;
+  --color-ocean-300: #7ec4de;
+  --color-ocean-400: #4aa8ca;
+  --color-ocean-500: #2d8fb3;
+  --color-ocean-600: #1f7396;
+  --color-ocean-700: #1a5d7a;
+  --color-ocean-800: #1a4d65;
+  --color-ocean-900: #1a3f55;
+  --color-ocean-950: #0f2838;
+
+  /* Teal Accents */
+  --color-teal-50: #effefb;
+  --color-teal-100: #c7fff4;
+  --color-teal-200: #90ffea;
+  --color-teal-300: #51f7dc;
+  --color-teal-400: #1ee4c9;
+  --color-teal-500: #06c8b0;
+  --color-teal-600: #02a190;
+  --color-teal-700: #078075;
+  --color-teal-800: #0b665f;
+  --color-teal-900: #0e544e;
+  --color-teal-950: #003331;
+
+  /* Sand Neutrals */
+  --color-sand-50: #faf8f5;
+  --color-sand-100: #f3efe8;
+  --color-sand-200: #e8e0d4;
+  --color-sand-300: #d6c9b6;
+  --color-sand-400: #c2ae94;
+  --color-sand-500: #b39a7c;
+  --color-sand-600: #a68a6d;
+  --color-sand-700: #8b725b;
+  --color-sand-800: #725e4d;
+  --color-sand-900: #5e4e41;
+  --color-sand-950: #322922;
+
+  /* Mist (soft grays with blue undertone) */
+  --color-mist-50: #f6f8f9;
+  --color-mist-100: #ecf0f2;
+  --color-mist-200: #d5dde2;
+  --color-mist-300: #b1c0c9;
+  --color-mist-400: #879eab;
+  --color-mist-500: #688391;
+  --color-mist-600: #536b78;
+  --color-mist-700: #445762;
+  --color-mist-800: #3b4a53;
+  --color-mist-900: #344047;
+  --color-mist-950: #21292f;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
