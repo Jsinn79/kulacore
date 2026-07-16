@@ -116,8 +116,8 @@ function Navbar() {
           <a href="#features" className="hover:text-ocean-700 transition">Features</a>
           <a href="#classes" className="hover:text-ocean-700 transition">Classes</a>
           <a href="#pricing" className="hover:text-ocean-700 transition">Pricing</a>
-          <a href="#waitlist" className="rounded-full bg-ocean-600 px-5 py-2 text-white hover:bg-ocean-700 transition">
-            Join Waitlist
+          <a href="#pricing" className="rounded-full bg-ocean-600 px-5 py-2 text-white hover:bg-ocean-700 transition">
+            Subscribe — $9.99/mo
           </a>
         </div>
 
@@ -135,8 +135,8 @@ function Navbar() {
           <a href="#features" onClick={() => setOpen(false)} className="py-2">Features</a>
           <a href="#classes" onClick={() => setOpen(false)} className="py-2">Classes</a>
           <a href="#pricing" onClick={() => setOpen(false)} className="py-2">Pricing</a>
-          <a href="#waitlist" onClick={() => setOpen(false)} className="rounded-full bg-ocean-600 px-5 py-2 text-white text-center">
-            Join Waitlist
+          <a href="#pricing" onClick={() => setOpen(false)} className="rounded-full bg-ocean-600 px-5 py-2 text-white text-center">
+            Subscribe — $9.99/mo
           </a>
         </div>
       )}
@@ -153,7 +153,7 @@ function Hero() {
 
       <div className="relative mx-auto max-w-4xl px-5 text-center">
         <p className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 border border-teal-200 px-4 py-1.5 text-xs font-semibold text-teal-700 uppercase tracking-wider mb-6">
-          <SparklesIcon className="w-3.5 h-3.5" /> Coming Soon
+          <SparklesIcon className="w-3.5 h-3.5" /> Now Open — $9.99/mo
         </p>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-ocean-900 leading-[1.1]">
@@ -165,15 +165,15 @@ function Hero() {
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-mist-500 max-w-2xl mx-auto leading-relaxed">
-          On-demand yoga, a connected community, and intelligent progress tracking — all in one beautifully simple app.
+          Personalized flows guided by AI instructors, paired with AI meal plans — one practice, one membership. $9.99/month, cancel anytime.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#waitlist"
+            href="#pricing"
             className="w-full sm:w-auto rounded-full bg-ocean-600 px-8 py-3.5 text-white font-semibold text-base shadow-lg shadow-ocean-600/25 hover:bg-ocean-700 hover:shadow-ocean-700/30 transition-all"
           >
-            Join the Waitlist
+            Subscribe — $9.99/mo
           </a>
           <a
             href="#features"
@@ -205,9 +205,15 @@ const features = [
   },
   {
     icon: SparklesIcon,
-    title: "AI-Guided Progress",
+    title: "AI Yoga Instructors",
     description:
-      "Intelligent insights that learn you. Get personalized recommendations, track milestones, and watch your practice deepen over time.",
+      "Tell your AI instructor your goal, level, and any sore spots — get a guided flow with pacing and breath cues, adapted to you every session.",
+  },
+  {
+    icon: HeartIcon,
+    title: "AI Meal Planning",
+    description:
+      "Weekly meal plans and grocery lists built around your dietary needs and your practice — light pre-flow fuel, recovery meals, and more.",
   },
 ];
 
@@ -372,40 +378,41 @@ function FeaturedClasses() {
   );
 }
 
-/* ─── Pricing / Early Bird Offer ─── */
+/* ─── Pricing / Membership ─── */
 function Pricing() {
+  const SUBSCRIBE_URL = "https://buy.stripe.com/eVq8wP0T4cZp4jl2kJ8Ra02";
+
   return (
     <section id="pricing" className="py-20 md:py-28 bg-ocean-50">
       <div className="mx-auto max-w-3xl px-5 text-center">
-        <p className="text-sm font-semibold text-teal-600 uppercase tracking-wider mb-3">Early Bird Offer</p>
+        <p className="text-sm font-semibold text-teal-600 uppercase tracking-wider mb-3">Membership</p>
         <h2 className="text-3xl md:text-4xl font-bold text-ocean-900 tracking-tight mb-6">
-          Start for free. Pay when you&apos;re ready.
+          One membership. Your AI instructor and meal planner, always on.
         </h2>
         <p className="text-mist-500 text-lg mb-12 max-w-xl mx-auto">
-          Secure your founding-member spot today — no credit card required.
+          Cancel anytime — no long-term commitment.
         </p>
 
         <div className="relative mx-auto max-w-sm rounded-3xl border border-ocean-200 bg-white shadow-xl shadow-ocean-100/30 p-8 md:p-10 text-left">
           {/* Badge */}
           <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-ocean-500 to-teal-500 px-4 py-1 text-xs font-bold text-white uppercase tracking-wider shadow-md">
-            Early Bird
+            KulaCore Membership
           </span>
 
           <div className="mt-2 mb-6">
             <div className="flex items-end gap-1">
-              <span className="text-5xl font-extrabold text-ocean-900">$0</span>
-              <span className="text-mist-400 text-lg mb-1">/upfront</span>
+              <span className="text-5xl font-extrabold text-ocean-900">$9.99</span>
+              <span className="text-mist-400 text-lg mb-1">/month</span>
             </div>
-            <p className="text-mist-500 mt-1 text-sm">Then $14.99/mo after launch — cancel anytime</p>
+            <p className="text-mist-500 mt-1 text-sm">Billed monthly — cancel anytime</p>
           </div>
 
           <ul className="space-y-3 mb-8 text-sm text-mist-600">
             {[
+              "Unlimited AI yoga instructor sessions",
+              "Weekly AI meal plans + grocery lists",
               "Unlimited on-demand classes",
               "Community circles & challenges",
-              "AI-powered practice insights",
-              "Founding member badge forever",
-              "Priority access to new features",
             ].map((item) => (
               <li key={item} className="flex items-start gap-2.5">
                 <svg className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
@@ -417,10 +424,10 @@ function Pricing() {
           </ul>
 
           <a
-            href="#waitlist"
+            href={SUBSCRIBE_URL}
             className="block w-full rounded-full bg-ocean-600 py-3.5 text-center text-white font-semibold shadow-lg shadow-ocean-600/25 hover:bg-ocean-700 transition"
           >
-            Claim Your Spot
+            Subscribe Now
           </a>
         </div>
       </div>
