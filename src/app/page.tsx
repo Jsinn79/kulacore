@@ -117,7 +117,7 @@ function Navbar() {
           <a href="#classes" className="hover:text-ocean-700 transition">Classes</a>
           <a href="#pricing" className="hover:text-ocean-700 transition">Pricing</a>
           <a href="#pricing" className="rounded-full bg-ocean-600 px-5 py-2 text-white hover:bg-ocean-700 transition">
-            Subscribe — $9.99/mo
+            Start Free Trial
           </a>
         </div>
 
@@ -136,7 +136,7 @@ function Navbar() {
           <a href="#classes" onClick={() => setOpen(false)} className="py-2">Classes</a>
           <a href="#pricing" onClick={() => setOpen(false)} className="py-2">Pricing</a>
           <a href="#pricing" onClick={() => setOpen(false)} className="rounded-full bg-ocean-600 px-5 py-2 text-white text-center">
-            Subscribe — $9.99/mo
+            Start Free Trial
           </a>
         </div>
       )}
@@ -153,7 +153,7 @@ function Hero() {
 
       <div className="relative mx-auto max-w-4xl px-5 text-center">
         <p className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 border border-teal-200 px-4 py-1.5 text-xs font-semibold text-teal-700 uppercase tracking-wider mb-6">
-          <SparklesIcon className="w-3.5 h-3.5" /> Now Open — $9.99/mo
+          <SparklesIcon className="w-3.5 h-3.5" /> Now Open — 14 Days Free
         </p>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-ocean-900 leading-[1.1]">
@@ -165,7 +165,7 @@ function Hero() {
         </h1>
 
         <p className="mt-6 text-lg md:text-xl text-mist-500 max-w-2xl mx-auto leading-relaxed">
-          Personalized flows guided by AI instructors, paired with AI meal plans — one practice, one membership. $9.99/month, cancel anytime.
+          Personalized flows guided by AI instructors, paired with AI meal plans — one practice, one membership. Try free for 14 days, then $14.99/month, cancel anytime.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -173,7 +173,7 @@ function Hero() {
             href="#pricing"
             className="w-full sm:w-auto rounded-full bg-ocean-600 px-8 py-3.5 text-white font-semibold text-base shadow-lg shadow-ocean-600/25 hover:bg-ocean-700 hover:shadow-ocean-700/30 transition-all"
           >
-            Subscribe — $9.99/mo
+            Start Free Trial
           </a>
           <a
             href="#features"
@@ -380,7 +380,7 @@ function FeaturedClasses() {
 
 /* ─── Pricing / Membership ─── */
 function Pricing() {
-  const SUBSCRIBE_URL = "https://buy.stripe.com/eVq8wP0T4cZp4jl2kJ8Ra02";
+  const SUBSCRIBE_URL = "https://buy.stripe.com/7sY28r7hse3tcPR1gF8Ra03";
 
   return (
     <section id="pricing" className="py-20 md:py-28 bg-ocean-50">
@@ -390,21 +390,21 @@ function Pricing() {
           One membership. Your AI instructor and meal planner, always on.
         </h2>
         <p className="text-mist-500 text-lg mb-12 max-w-xl mx-auto">
-          Cancel anytime — no long-term commitment.
+          Try it free for 14 days. Cancel anytime — no long-term commitment.
         </p>
 
         <div className="relative mx-auto max-w-sm rounded-3xl border border-ocean-200 bg-white shadow-xl shadow-ocean-100/30 p-8 md:p-10 text-left">
           {/* Badge */}
           <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-ocean-500 to-teal-500 px-4 py-1 text-xs font-bold text-white uppercase tracking-wider shadow-md">
-            KulaCore Membership
+            14-Day Free Trial
           </span>
 
           <div className="mt-2 mb-6">
             <div className="flex items-end gap-1">
-              <span className="text-5xl font-extrabold text-ocean-900">$9.99</span>
-              <span className="text-mist-400 text-lg mb-1">/month</span>
+              <span className="text-5xl font-extrabold text-ocean-900">Free</span>
+              <span className="text-mist-400 text-lg mb-1">for 14 days</span>
             </div>
-            <p className="text-mist-500 mt-1 text-sm">Billed monthly — cancel anytime</p>
+            <p className="text-mist-500 mt-1 text-sm">Then $14.99/month — cancel anytime before your trial ends and you won&apos;t be charged</p>
           </div>
 
           <ul className="space-y-3 mb-8 text-sm text-mist-600">
@@ -427,8 +427,9 @@ function Pricing() {
             href={SUBSCRIBE_URL}
             className="block w-full rounded-full bg-ocean-600 py-3.5 text-center text-white font-semibold shadow-lg shadow-ocean-600/25 hover:bg-ocean-700 transition"
           >
-            Subscribe Now
+            Start Free Trial
           </a>
+          <p className="mt-3 text-xs text-mist-400 text-center">Card required to start — billing starts automatically after 14 days at $14.99/mo unless you cancel.</p>
         </div>
       </div>
     </section>
